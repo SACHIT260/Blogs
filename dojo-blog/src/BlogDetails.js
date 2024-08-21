@@ -8,11 +8,11 @@ const BlogDetails = () => {
     const { id } = useParams();
     console.log(id);
     
-    const { data: blog, error, isPending } = useFetch(`http://localhost:8000/blogs/${id}`);
+    const { data: blog, error, isPending } = useFetch(`https://blogs-nx1t.onrender.com/blogs/${id}`);
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch(`http://localhost:8000/blogs/${id}`, {
+        fetch(`https://blogs-nx1t.onrender.com/blogs/${id}`, {
             method: 'DELETE'
         })
         .then(res => {
